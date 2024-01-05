@@ -1,4 +1,4 @@
-﻿ using InAndOut.Data;
+﻿using InAndOut.Data;
 using InAndOut.Models;
 using InAndOut.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +15,7 @@ namespace InAndOut.Controllers
         private readonly ApplicationDbContext _db;
 
         public ExpenseController(ApplicationDbContext db)
-        { 
+        {
             _db = db;
         }
 
@@ -24,7 +24,7 @@ namespace InAndOut.Controllers
         {
             IEnumerable<Expense> objList = _db.Expenses;
             return View(objList);
-            
+
         }
 
         // GET-Create
@@ -60,7 +60,7 @@ namespace InAndOut.Controllers
         // GET-Delete
         public IActionResult Delete(int? id)
         {
-            if(id == null || id == 0)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
@@ -78,7 +78,7 @@ namespace InAndOut.Controllers
         public IActionResult DeletePost(int? id)
         {
             var obj = _db.Expenses.Find(id);
-            if(obj == null)
+            if (obj == null)
             {
                 return NotFound();
             }
