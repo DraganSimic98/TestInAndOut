@@ -1,4 +1,4 @@
-﻿using InAndOut.Data;
+﻿ using InAndOut.Data;
 using InAndOut.Models;
 using InAndOut.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +15,7 @@ namespace InAndOut.Controllers
         private readonly ApplicationDbContext _db;
 
         public ExpenseController(ApplicationDbContext db)
-        {
+        { //Dragan
             _db = db;
         }
 
