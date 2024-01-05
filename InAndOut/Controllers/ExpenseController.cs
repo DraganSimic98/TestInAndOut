@@ -15,7 +15,7 @@ namespace InAndOut.Controllers
         private readonly ApplicationDbContext _db;
 
         public ExpenseController(ApplicationDbContext db)
-        { //Dragan
+        { 
             _db = db;
         }
 
